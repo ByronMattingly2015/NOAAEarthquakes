@@ -1,0 +1,134 @@
+---
+output: github_document
+always_allow_html: true
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  message = FALSE,
+  warning = FALSE,
+  comment = "#>",
+  out.width = "100%"
+)
+```
+
+# README
+
+<!-- badges: start -->
+![GitHub Actions build status](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?branch=ByronMattingly2015-patch-1)
+<!-- badges: end -->
+
+This NOAA Earthquake package contains data on significant earthquakes from 2150 B.C. to the present (May2023) provided by the National Centers For Environmental Information on [https://www.ngdc.noaa.gov](https://www.ngdc.noaa.gov). The tab-delimited data were downloaded as a TSV (tab separated value) file ('earthquakes.tsv') from the [NCEI/WDS Global Significant Earthquake Database](https://www.ngdc.noaa.gov/hazel/view/hazards/earthquake/search).
+
+This package contains functions to read and clean the data, geoms to visualize and label earthquakes on a timeline, and functions to display and label earthquakes on a map. 
+
+# Installation
+
+You can install this R package from GitHub using devtools:
+
+```{r, eval = FALSE}
+library(devtools)
+install_github("ByronMattingly2015/NOAAEarthquakes")
+```
+
+# Usage
+
+Packages relevant for these examples:
+
+```{r, packages}
+library(NOAAEarthquakes)
+library(tidyverse)
+library(leaflet)
+```
+## Included data
+
+Data files included within the package are:
+
+```{r}
+list.files(system.file("extdata", package = "NOAAEarthquakes"))
+```
+
+## Reading/Cleaning Data
+
+* eq_read_data() - reads a TSV data file into a data frame and formats some of the columns
+* eq_location_clean() - splits the `LOCATION` column into `COUNTRY` and `REGION` columns
+* eq_clean_data() - uses lubridate to form a `DATE` column from the `YEAR`,`MONTH`,`DAY` columns in the TSV data file 
+
+Viewing the 5 most deadly earthquakes since the year 2000:
+
+```{r, 5years}
+data <- eq_clean_data() %>% 
+    dplyr::filter(!is.na(TOTAL_DEATHS)) %>% 
+    dplyr::select(DATE, YEAR, COUNTRY, REGION, LONGITUDE, LATITUDE, MAG, TOTAL_DEATHS) %>%
+  tidyr::drop_na()
+data %>% 
+  dplyr::filter(YEAR > 1999) %>%
+  dplyr::arrange(desc(TOTAL_DEATHS)) %>%
+                   head(n = 5)
+```
+
+
+## Custom ggplot2 Layers
+
+### Timeline
+
+This package includes *geom_timeline()* which adds custom layers to ggplot for visualizing Earthquakes on a timeline.
+
+For example, here's how to plot a timeline of deadly earthquakes in 3 different countries:
+
+```{r, timeline}
+data %>% dplyr::filter(YEAR > 1999,
+                       COUNTRY %in% c("JAPAN", "CHINA","NEPAL")) %>%
+    ggplot2::ggplot() +
+    geom_timeline(aes(x = DATE,
+                      y = COUNTRY,
+                      size = MAG,
+                      color = TOTAL_DEATHS))
+```
+
+### Annotated Timeline
+
+*geom_timeline_label()* can be used to draw labels with markers (line segments) by adding layers to ggplot.
+
+Labeling the 5 most deadly earthquakes in JAPAN since 1990 by Magnitude:
+
+```{r, timelinelabel}
+data %>% dplyr::filter(COUNTRY == "JAPAN", 
+                              YEAR >= 1990) %>%
+  ggplot2::ggplot(aes(x = DATE,
+                      y = COUNTRY,
+                      size = MAG,
+                      color = TOTAL_DEATHS,
+                      label = REGION,
+                      mag = TOTAL_DEATHS)) +
+  geom_timeline() +
+  geom_timeline_label(aes(n_max = 5))
+```
+
+## Leaflet Maps
+
+*eq_map()* uses the `leaflet` package to generate maps and takes one argument `annot_col` that specifies the column to use for annotation (by default `annot_col = DATE`) which is displayed as pop-up text over a circle centered at each coordinate. For a dataframe with the columns `LONGITUDE`, `LATITUDE`, `MAG`, `annot_col` displays this information in the pop-up text instead.
+
+Plot the epicenters on a leaflet map:
+
+```{r, basicmap, eval = FALSE}
+data %>% 
+  dplyr::filter(COUNTRY == "MEXICO", 
+                YEAR >= 2000) %>% 
+  eq_map(annot_col = "DATE")
+```
+
+
+Used in conjunction with *eq_map()*, *eq_create_label()* generates a fancier HTML label.
+
+```{r, fancymap, eval = FALSE}
+data %>% 
+  dplyr::filter(COUNTRY == "MEXICO",
+                YEAR >= 2000) %>% 
+  dplyr::mutate(popup_text = eq_create_label(.)) %>% 
+  eq_map(annot_col = "popup_text")
+```
+

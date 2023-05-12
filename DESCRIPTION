@@ -1,0 +1,30 @@
+Package: NOAAEarthquakes
+Type: Package
+Title: Tools for visualizing NOAA earthquake data
+Version: 0.0.1
+Author: Byron Mattingly
+Maintainer: Byron Mattingly <noname@noprovider.net>
+Description: The package standardizes and cleans NOAA earthquake data that can be plotted as a time series or on a map.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.3
+Imports: 
+    dplyr,
+    ggplot2,
+    leaflet,
+    lubridate,
+    magrittr,
+    qpdf,
+    readr,
+    rlang,
+    scales,
+    stringr,
+    tibble,
+    tidyr
+Suggests: 
+    rmarkdown,
+    knitr,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+VignetteBuilder: knitr
