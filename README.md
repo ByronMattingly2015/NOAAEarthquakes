@@ -6,7 +6,7 @@
 <!-- badges: start -->
 
 ![GitHub Actions build
-status](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?branch=ByronMattingly2015-patch-1)
+status](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
 <!-- badges: end -->
 
 This NOAA Earthquake package contains data on significant earthquakes
