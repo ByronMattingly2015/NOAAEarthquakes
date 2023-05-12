@@ -97,8 +97,6 @@ data %>% dplyr::filter(YEAR > 1999,
                       size = MAG,
                       color = TOTAL_DEATHS))
 ```
-
-<img src="README_files/figure-gfm/timeline-1.png" width="100%" />
 <img src="images/ReadMe_Timeline.png" width="100%" />
 
 ### Annotated Timeline
@@ -120,9 +118,6 @@ data %>% dplyr::filter(COUNTRY == "JAPAN",
   geom_timeline() +
   geom_timeline_label(aes(n_max = 5))
 ```
-
-<img src="README_files/figure-gfm/timelinelabel-1.png" width="100%" />
-
 <img src="images/ReadMe_AnnotatedTimeline.png" width="100%" /> \##
 Leaflet Maps
 
