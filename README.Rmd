@@ -88,6 +88,9 @@ data %>% dplyr::filter(YEAR > 1999,
                       size = MAG,
                       color = TOTAL_DEATHS))
 ```
+```{r timeline1, echo=FALSE, out.width = '100%'}
+knitr::include_graphics(file.path("images", "ReadMe_Timeline.png"))
+```
 
 ### Annotated Timeline
 
@@ -108,6 +111,9 @@ data %>% dplyr::filter(COUNTRY == "JAPAN",
   geom_timeline_label(aes(n_max = 5))
 ```
 
+```{r timelinelabel1, echo=FALSE, out.width = '100%'}
+knitr::include_graphics(file.path("images", "ReadMe_AnnotatedTimeline.png"))
+```
 ## Leaflet Maps
 
 *eq_map()* uses the `leaflet` package to generate maps and takes one argument `annot_col` that specifies the column to use for annotation (by default `annot_col = DATE`) which is displayed as pop-up text over a circle centered at each coordinate. For a dataframe with the columns `LONGITUDE`, `LATITUDE`, `MAG`, `annot_col` displays this information in the pop-up text instead.
@@ -121,7 +127,9 @@ data %>%
   eq_map(annot_col = "DATE")
 ```
 
-
+```{r basicmap1, echo=FALSE, out.width = '100%'}
+knitr::include_graphics(file.path("images", "ReadMe_LeafletMap.png"))
+```
 Used in conjunction with *eq_map()*, *eq_create_label()* generates a fancier HTML label.
 
 ```{r, fancymap, eval = FALSE}
@@ -131,4 +139,6 @@ data %>%
   dplyr::mutate(popup_text = eq_create_label(.)) %>% 
   eq_map(annot_col = "popup_text")
 ```
-
+```{r fancymap1, echo=FALSE, out.width = '100%'}
+knitr::include_graphics(file.path("images", "ReadMe_FancyLeafletMap.png"))
+```
