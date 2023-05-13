@@ -20,7 +20,7 @@ GitHub:  https://github.com/ByronMattingly2015/NOAAEarthquakes
 
 ## Purpose
 
-The sNOAA Earthquake package contains functions to read and clean the data, geoms to
+The NOAA Earthquake package contains functions to read and clean the data, geoms to
 visualize and label earthquakes on a timeline, and functions to display
 and label earthquakes on a map.
 
