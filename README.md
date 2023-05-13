@@ -15,7 +15,7 @@ MIT License 2023
 
 ## Documentation, Packaging, Testing / Package Evaluation
 
-Package: NOAAEarthquakes
+Package: NOAAEarthquakes  
 GitHub:  https://github.com/ByronMattingly2015/NOAAEarthquakes
 
 ## Purpose
