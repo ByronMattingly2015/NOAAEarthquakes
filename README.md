@@ -4,22 +4,86 @@
 # README
 
 <!-- badges: start -->
-
-![GitHub Actions build
-status](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ByronMattingly2015/NOAAEarthquakes?svg=true)](https://ci.appveyor.com/api/projects/status/github/ByronMattingly2015/)
 <!-- badges: end -->
 
-This NOAA Earthquake package contains data on significant earthquakes
+# COURSERA: [Mastering Softwware Development in R Capstone](https://www.coursera.org/learn/r-capstone/)
+* [Week 4: Documentation, Packaging, and Testing](https://www.coursera.org/learn/r-capstone/home/week/4) Peer-graded Assignment
+* [Week 6: Package Evaluation](https://www.coursera.org/learn/r-capstone/home/week/6) Peer-graded Assignment
+Byron Mattingly   
+MIT License 2023   
+
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ByronMattingly2015/NOAAEarthquakes?svg=true)](https://ci.appveyor.com/api/projects/status/github/ByronMattingly2015/)
+
+## Documentation, Packaging, Testing / Package Evaluation
+
+Package: NOAAEarthquakes
+GitHub:  https://github.com/ByronMattingly2015/NOAAEarthquakes
+
+## Purpose
+
+The sNOAA Earthquake package contains functions to read and clean the data, geoms to
+visualize and label earthquakes on a timeline, and functions to display
+and label earthquakes on a map.
+
+## Data Source
+
+This package contains NOAA data on significant earthquakes
 from 2150 B.C. to the present (May2023) provided by the National Centers
 For Environmental Information on <https://www.ngdc.noaa.gov>. The
 tab-delimited data were downloaded as a TSV (tab separated value) file
 (‘earthquakes.tsv’) from the [NCEI/WDS Global Significant Earthquake
 Database](https://www.ngdc.noaa.gov/hazel/view/hazards/earthquake/search).
 
-This package contains functions to read and clean the data, geoms to
-visualize and label earthquakes on a timeline, and functions to display
-and label earthquakes on a map.
+## Please note
+* My understanding is that a mentor (when this course had one!) had posted earlier that AppVeyor would be equally accepted as Travis CI (which is no longer "free" for open source projects and now costs $64 / month for the "hobbyist" edition at the time this project was built!).
+* While Travis is used for Continuous (CI) of Linux-based systems, AppVeyor is is used for CI of Windows-based systems and is still free to use for Open-source projects.
+* Refer to "3.11 Continuous Integration" and "3.12 Cross Platform Development", pp. 230-240 in <em>Mastering Software Development in R (2017-08-15)</em> by Roger D. Peng, Sean Kross and Brooke Anderson for more on using Travis and AppVeyor.
+
+## Review Criteria
+
+For this assignment you'll submit a link to the [GitHub repository](https://github.com/ByronMattingly2015/NOAAEarthquakes) which contains
+your package. This assessment will ask reviewers the following questions:
+
+### Week 4: Documentation, Packaging, and Testing
+
+* Does the package contain help files for each function (cf. [man/](https://github.com/ByronMattingly2015/NOAAEarthquakes/tree/master/man) directory)?
+
+* Are there examples in the help files for each function (cf. [man/](https://github.com/ByronMattingly2015/NOAAEarthquakes/tree/master/man) directory)?
+
+* Does the package have a [NAMESPACE](https://github.com/ByronMattingly2015/NOAAEarthquakes/blob/master/NAMESPACE) file?
+
+* Is every function in the package tested (cf. [tests/](https://github.com/ByronMattingly2015/NOAAEarthquakes/tree/master/tests/testthat) directory)?
+
+* Is every function in the package demonstrated in the vignette (cf. [vignette/](https://github.com/ByronMattingly2015/NOAAEarthquakes/blob/master/vignettes/NOAAEarthquakes.Rmd) directory)?
+
+
+### Week 6: Package Evaluation
+
+* Your package must be hosted on GitHub. You will be providing the [URL to your package on GitHub](https://github.com/ByronMattingly2015/NOAAEarthquakes) so that other students can evaluate your work.
+
+* Your package must at least contain the following directories: 
+[R/](https://github.com/ByronMattingly2015/NOAAEarthquakes/tree/master/R), 
+[man/](https://github.com/ByronMattingly2015/NOAAEarthquakes/tree/master/man), 
+[tests/](https://github.com/ByronMattingly2015/NOAAEarthquakes/tree/master/tests/testthat), 
+[vignette/](https://github.com/ByronMattingly2015/NOAAEarthquakes/blob/master/vignettes/NOAAEarthquakes.Rmd).
+
+* Your package must at least contain the following files: [.travis.yml](https://github.com/ByronMattingly2015/NOAAEarthquakes/blob/master/.travis.yml), 
+[DESCRIPTION](https://github.com/ByronMattingly2015/NOAAEarthquakes/blob/master/DESCRIPTION), 
+[LICENSE](https://github.com/ByronMattingly2015/NOAAEarthquakes/blob/master/LICENSE), 
+[NAMESPACE](https://github.com/ByronMattingly2015/NOAAEarthquakes/blob/master/NAMESPACE), 
+[README.md](https://github.com/ByronMattingly2015/NOAAEarthquakes/blob/master/README.md).
+
+* Every function in your package must have a corresponding test (cf. [tests/](https://github.com/ByronMattingly2015/NOAAEarthquakes/tree/master/tests/testthat) directory).
+
+* Every function in your package must have at least one example in its documentation (cf. [man/](https://github.com/ByronMattingly2015/NOAAEarthquakes/tree/master/man) directory).
+
+* Your package must have a [vignette/](https://github.com/ByronMattingly2015/NOAAEarthquakes/blob/master/vignettes/NOAAEarthquakes.Rmd) which provides an explanation of the purpose for your package and how it could be used. The vignette should include examples for every function that is exported in the package's [NAMESPACE](https://github.com/ByronMattingly2015/NOAAEarthquakes/blob/master/NAMESPACE) file.
+
+* <s>A Travis badge</s> An [AppVeyor badge](https://ci.appveyor.com/project/ByronMattingly2015/NOAAEarthquakes) that says "build passing" that is linked to your package's <s>Travis</s>[AppVeyor](https://ci.appveyor.com/project/ByronMattingly2015/NOAAEarthquakes) build should appear at the top of your [README.md](https://github.com/ByronMattingly2015/NOAAEarthquakes/blob/master/README.md) file on GitHub.
+
+* Your package must be tested using <s>Travis</s>[AppVeyor](https://ci.appveyor.com/project/ByronMattingly2015/NOAAEarthquakes). There should be no errors, warnings, or notes at the end of your <s>Travis</s>AppVeyorbuild, and all of your tests should be run on <s>Travis</s>[AppVeyor](https://ci.appveyor.com/project/ByronMattingly2015/NOAAEarthquakes).
+
 
 # Installation
 
@@ -151,3 +215,16 @@ data %>%
 ```
 
 <img src="images/ReadMe_FancyLeafletMap.png" width="100%" />
+
+## Links:
+* [8.3 Raw Data file](https://r-pkgs.org/data.html#sec-data-extdata) explains how to use inst/extdata.
+* [Writing an R package from scratch](https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/)    
+* [Github: roxygen2](https://github.com/klutometis/roxygen#roxygen2)   
+* [Common `roxygen2` tags](https://bookdown.org/rdpeng/RProgDA/documentation.html#common-roxygen2-tags)
+* [Text formatting reference sheet](https://cran.r-project.org/web/packages/roxygen2/vignettes/formatting.html)
+* [Writing R Extensions](https://cran.r-project.org/doc/manuals/R-exts.html#Creating-R-packages)
+* [Travis: Building R packages](https://docs.travis-ci.com/user/languages/r/)
+* [Vignettes: long-form documentation](http://r-pkgs.had.co.nz/vignettes.html)
+* [Package Development with devtools Cheat Sheet](https://www.rstudio.com/wp-content/uploads/2015/03/devtools-cheatsheet.pdf)
+* [Customizing Package Build Options](https://support.rstudio.com/hc/en-us/articles/200486518-Customizing-Package-Build-Options)
+* [Testing packages](http://r-pkgs.had.co.nz/tests.html)
