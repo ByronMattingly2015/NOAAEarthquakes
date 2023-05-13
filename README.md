@@ -7,7 +7,7 @@
 
 ![GitHub Actions build
 status](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ByronMattingly2015/FARS?svg=true)](https://ci.appveyor.com/api/projects/status/github/ByronMattingly2015/)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ByronMattingly2015/NOAAEarthquakes?svg=true)](https://ci.appveyor.com/api/projects/status/github/ByronMattingly2015/)
 <!-- badges: end -->
 
 This NOAA Earthquake package contains data on significant earthquakes
