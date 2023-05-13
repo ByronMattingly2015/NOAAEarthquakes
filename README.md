@@ -7,9 +7,9 @@
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ByronMattingly2015/NOAAEarthquakes?svg=true)](https://ci.appveyor.com/api/projects/status/github/ByronMattingly2015/)
 <!-- badges: end -->
 
-# COURSERA: [Mastering Softwware Development in R Capstone](https://www.coursera.org/learn/r-capstone/)
-* [Week 4: Documentation, Packaging, and Testing](https://www.coursera.org/learn/r-capstone/home/week/4) Peer-graded Assignment
-* [Week 6: Package Evaluation](https://www.coursera.org/learn/r-capstone/home/week/6) Peer-graded Assignment
+# COURSERA: [Mastering Softwware Development in R Capstone](https://www.coursera.org/learn/r-capstone/)  
+* [Week 4: Documentation, Packaging, and Testing](https://www.coursera.org/learn/r-capstone/home/week/4) Peer-graded Assignment  
+* [Week 6: Package Evaluation](https://www.coursera.org/learn/r-capstone/home/week/6) Peer-graded Assignment  
 Byron Mattingly   
 MIT License 2023   
 
