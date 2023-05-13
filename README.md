@@ -13,8 +13,6 @@
 Byron Mattingly   
 MIT License 2023   
 
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ByronMattingly2015/NOAAEarthquakes?svg=true)](https://ci.appveyor.com/api/projects/status/github/ByronMattingly2015/)
-
 ## Documentation, Packaging, Testing / Package Evaluation
 
 Package: NOAAEarthquakes
