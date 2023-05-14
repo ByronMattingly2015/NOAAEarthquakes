@@ -15,15 +15,17 @@ knitr::opts_chunk$set(
 )
 ```
 
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
 # README
 
 <!-- badges: start -->
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ByronMattingly2015/NOAAEarthquakes?svg=true)](https://ci.appveyor.com/api/projects/status/github/ByronMattingly2015/)
 <!-- badges: end -->
 
-# COURSERA: [Mastering Softwware Development in R Capstone](https://www.coursera.org/learn/r-capstone/)
-* [Week 4: Documentation, Packaging, and Testing](https://www.coursera.org/learn/r-capstone/home/week/4) Peer-graded Assignment
-* [Week 6: Package Evaluation](https://www.coursera.org/learn/r-capstone/home/week/6) Peer-graded Assignment
+# COURSERA: [Mastering Softwware Development in R Capstone](https://www.coursera.org/learn/r-capstone/)  
+* [Week 4: Documentation, Packaging, and Testing](https://www.coursera.org/learn/r-capstone/home/week/4) Peer-graded Assignment  
+* [Week 6: Package Evaluation](https://www.coursera.org/learn/r-capstone/home/week/6) Peer-graded Assignment  
 Byron Mattingly   
 MIT License 2023   
 
@@ -80,7 +82,7 @@ your package. This assessment will ask reviewers the following questions:
 [tests/](https://github.com/ByronMattingly2015/NOAAEarthquakes/tree/master/tests/testthat), 
 [vignette/](https://github.com/ByronMattingly2015/NOAAEarthquakes/blob/master/vignettes/NOAAEarthquakes.Rmd).
 
-* Your package must at least contain the following files: [.travis.yml](https://github.com/ByronMattingly2015/NOAAEarthquakes/blob/master/.travis.yml), 
+* Your package must at least contain the following files: <s>.travis.yml</s>[appveyor.yml](https://github.com/ByronMattingly2015/NOAAEarthquakes/blob/master/appveyor.yml), 
 [DESCRIPTION](https://github.com/ByronMattingly2015/NOAAEarthquakes/blob/master/DESCRIPTION), 
 [LICENSE](https://github.com/ByronMattingly2015/NOAAEarthquakes/blob/master/LICENSE), 
 [NAMESPACE](https://github.com/ByronMattingly2015/NOAAEarthquakes/blob/master/NAMESPACE), 
@@ -94,7 +96,7 @@ your package. This assessment will ask reviewers the following questions:
 
 * <s>A Travis badge</s> An [AppVeyor badge](https://ci.appveyor.com/project/ByronMattingly2015/NOAAEarthquakes) that says "build passing" that is linked to your package's <s>Travis</s>[AppVeyor](https://ci.appveyor.com/project/ByronMattingly2015/NOAAEarthquakes) build should appear at the top of your [README.md](https://github.com/ByronMattingly2015/NOAAEarthquakes/blob/master/README.md) file on GitHub.
 
-* Your package must be tested using <s>Travis</s>[AppVeyor](https://ci.appveyor.com/project/ByronMattingly2015/NOAAEarthquakes). There should be no errors, warnings, or notes at the end of your <s>Travis</s>AppVeyorbuild, and all of your tests should be run on <s>Travis</s>[AppVeyor](https://ci.appveyor.com/project/ByronMattingly2015/NOAAEarthquakes).  
+* Your package must be tested using <s>Travis</s>[AppVeyor](https://ci.appveyor.com/project/ByronMattingly2015/NOAAEarthquakes). There should be no errors, warnings, or notes at the end of your <s>Travis</s>AppVeyorbuild, and all of your tests should be run on <s>Travis</s>[AppVeyor](https://ci.appveyor.com/project/ByronMattingly2015/NOAAEarthquakes).
 
 # Installation
 
