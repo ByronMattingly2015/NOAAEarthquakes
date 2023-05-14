@@ -66,7 +66,7 @@ your package. This assessment will ask reviewers the following questions:
 [tests/](https://github.com/ByronMattingly2015/NOAAEarthquakes/tree/master/tests/testthat), 
 [vignette/](https://github.com/ByronMattingly2015/NOAAEarthquakes/blob/master/vignettes/NOAAEarthquakes.Rmd).
 
-* Your package must at least contain the following files: [.travis.yml](https://github.com/ByronMattingly2015/NOAAEarthquakes/blob/master/.travis.yml), 
+* Your package must at least contain the following files: <s>.travis.yml</s>[appveyor](https://github.com/ByronMattingly2015/NOAAEarthquakes/blob/master/appveyor.yml), 
 [DESCRIPTION](https://github.com/ByronMattingly2015/NOAAEarthquakes/blob/master/DESCRIPTION), 
 [LICENSE](https://github.com/ByronMattingly2015/NOAAEarthquakes/blob/master/LICENSE), 
 [NAMESPACE](https://github.com/ByronMattingly2015/NOAAEarthquakes/blob/master/NAMESPACE), 
